@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#004680"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="210dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="45dp"
+        android:text="Banca Móvil"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSaludo"
+        android:layout_width="110dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginLeft="148dp"
+        android:layout_marginTop="16dp"
+        android:text="Bienvenido"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+    <EditText
+        android:id="@+id/etxtUsuario"
+        android:layout_width="283dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="@android:color/white"
+        android:gravity="center"
+        android:hint="Usuario"
+        android:paddingBottom="20dp"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#92FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSaludo" />
+
+    <EditText
+        android:id="@+id/etxtPassword"
+        android:layout_width="283dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="@android:color/white"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:paddingBottom="20dp"
+        android:textColorHint="#92FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtUsuario" />
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="215dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="70dp"
+        android:text="Ingresar"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        app:backgroundTint="#1271E4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtPassword" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

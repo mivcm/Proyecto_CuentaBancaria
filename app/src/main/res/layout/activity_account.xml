@@ -12,9 +12,9 @@
         android:id="@+id/txtSaludo2"
         android:layout_width="125dp"
         android:layout_height="40dp"
-        android:layout_marginStart="143dp"
-        android:layout_marginLeft="143dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="68dp"
         android:text="Bienvenido"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
@@ -22,25 +22,107 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="412dp"
-        android:layout_height="234dp"
-        android:background="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-    </FrameLayout>
-
-    <RelativeLayout
-        android:layout_width="370dp"
-        android:layout_height="368dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="136dp"
-        android:background="#FFFFFF"
-        android:elevation="10dp"
+    <TextView
+        android:id="@+id/txtDeposito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="84dp"
+        android:text="Depositar"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSaludo2"/>
+        app:layout_constraintTop_toBottomOf="@+id/txtSaldo" />
+
+    <TextView
+        android:id="@+id/txtRetiro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="72dp"
+        android:text="Retirar"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDeposito" />
+
+    <Button
+        android:id="@+id/btnConfirmar"
+        android:layout_width="185dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="113dp"
+        android:layout_marginLeft="113dp"
+        android:layout_marginTop="48dp"
+        android:text="Confirmar"
+        android:onClick="confirmar"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:backgroundTint="#1271E4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtRetiro" />
+
+    <EditText
+        android:id="@+id/etxtDeposito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="61dp"
+        android:backgroundTint="@android:color/white"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/txtDeposito"
+        app:layout_constraintTop_toBottomOf="@+id/txtSaldo" />
+
+    <EditText
+        android:id="@+id/etxtRetiro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="49dp"
+        android:backgroundTint="@android:color/white"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/txtRetiro"
+        app:layout_constraintTop_toBottomOf="@+id/etxtDeposito" />
+
+    <TextView
+        android:id="@+id/txtSaldo"
+        android:layout_width="212dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginLeft="99dp"
+        android:layout_marginTop="34dp"
+        android:gravity="center"
+        android:hint="Saldo"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#95FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSaludo2" />
+
+    <TextView
+        android:id="@+id/txtUsuario"
+        android:layout_width="141dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="69dp"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txtSaludo2"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

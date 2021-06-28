@@ -78,10 +78,26 @@
         android:layout_marginLeft="96dp"
         android:layout_marginTop="70dp"
         android:text="Ingresar"
+        android:onClick="ingresar"
         android:textAllCaps="true"
         android:textSize="20sp"
         app:backgroundTint="#1271E4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxtPassword" />
+
+    <Button
+        android:id="@+id/btnCrear"
+        android:layout_width="215dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="40dp"
+        android:text="Crear cuenta"
+        android:onClick="crearCuenta"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        app:backgroundTint="#1271E4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIngresar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

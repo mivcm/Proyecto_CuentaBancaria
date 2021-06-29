@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private EditText etxtUsuario, etxtPassword;
@@ -33,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
         etxtUsuario.setText(usuario);
         etxtPassword.setText(password);
         e.commit();
-        finish();
+        Toast.makeText(this, "Registro exitoso", Toast.LENGTH_LONG).show();
     }
 
-    public void  ingresar (View view){
+    public void  ingresar (View v){
         Intent enviar = new Intent(this, Account.class);
         enviar.putExtra("Usuario", etxtUsuario.getText().toString());
         startActivity(enviar);

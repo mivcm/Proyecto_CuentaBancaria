@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Account extends AppCompatActivity {
     private TextView txtUsuario, txtSaldo;
@@ -23,27 +24,27 @@ public class Account extends AppCompatActivity {
         txtUsuario.setText(enviar);
     }
 
-    public void deposito (View view){
+    public void retiro (View v){
+        int retirar = Integer.parseInt(etxtRetiro.getText().toString());
         int saldo = Integer.parseInt(txtSaldo.getText().toString());
+        int resta = saldo - retirar;
+        String resul =  String.valueOf(resta);
+        if (retirar > saldo){
+            Toast.makeText(this, "No hay saldo suficiente", Toast.LENGTH_SHORT).show();
+        } else {
+            txtSaldo.setText(resul);
+        }
+    }
+
+    public void deposito (View view){
         int depositar = Integer.parseInt(etxtDeposito.getText().toString());
+        int saldo = Integer.parseInt(txtSaldo.getText().toString());
         int suma = saldo + depositar;
         String resul = String.valueOf(suma);
         txtSaldo.setText(resul);
     }
 
-    public void retiro (View v){
-        int saldo = Integer.parseInt(txtSaldo.getText().toString());
-        int retirar = Integer.parseInt(etxtRetiro.getText().toString());
-        int resta = saldo - retirar;
-        String resul =  String.valueOf(resta);
-        txtSaldo.setText(resul);
-    }
-
-    public void confirmar (View vi){
-        if (etxtRetiro != null){
-            retiro(null);
-        } else if (etxtDeposito != null){
-            deposito(null);
-        }
+    public void salir (View vi) {
+        finishAffinity();
     }
 }
